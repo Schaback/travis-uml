@@ -6,6 +6,9 @@ install:
 - echo "deb https://www.bouml.fr/apt/trusty trusty free" | sudo tee -a /etc/apt/sources.list
 - sudo apt update
 - sudo apt install bouml
+- echo -e 'ID 111\nNOLANG\nCHARSET UTF-8\nSCREEN -1' > $HOME/.boumlrc
+- ls -la $HOME
+
 before_script:
 - "export DISPLAY=:99.0"
 - "sh -e /etc/init.d/xvfb start"
