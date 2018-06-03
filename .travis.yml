@@ -4,6 +4,7 @@ install:
 - lsb_release -a
 - wget -q https://www.bouml.fr/bouml_key.asc -O- | sudo apt-key add -
 - echo "deb https://www.bouml.fr/apt/trusty trusty free" | sudo tee -a /etc/apt/sources.list
+- sudo apt update
 - sudo apt install bouml
 before_script:
 - "export DISPLAY=:99.0"
