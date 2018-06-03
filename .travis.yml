@@ -13,5 +13,6 @@ before_script:
 script:
 - cd test
 - mkdir builds
+- (sleep 10; pkill bouml) &
 - bouml test.prj -exec ghtml -flat -svg -latin1 builds -del_html -del_css -exit 
 - ls builds
