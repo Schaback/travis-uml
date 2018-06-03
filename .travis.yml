@@ -1,0 +1,16 @@
+notifications:
+  email: false
+install:
+- lsb_release -a
+- wget -q https://www.bouml.fr/bouml_key.asc -O- | sudo apt-key add -
+- echo "deb https://www.bouml.fr/apt/bionic bionic free" | sudo tee -a /etc/apt/sources.list
+- sudo apt install bouml
+before_script:
+- "export DISPLAY=:99.0"
+- "sh -e /etc/init.d/xvfb start"
+- sleep 3 # give xvfb some time to start
+script:
+- cd test
+- mkdir builds
+- bouml test.prj -exec ghtml -flat -svg -latin1 builds -del_html -del_css -exit 
+- ls builds
