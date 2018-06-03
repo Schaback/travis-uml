@@ -1,0 +1,12 @@
+window_sizes 1920 1046 450 1464 898 96
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128111 // Test
+    1171 718 100 A4 180 0
+end
+show_stereotypes
+selected classview_ref 128111 // classView
+open
+  class_ref 128111 // Test
+end
+end
